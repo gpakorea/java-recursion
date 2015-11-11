@@ -1,0 +1,22 @@
+// RecursionOne.java
+
+public class RecursionOne {
+  
+  public static void main( String[] args ) {
+    
+    inception(5);
+    
+  } // END main method
+  
+  public static void inception( int n ) {
+    
+    if( n > 0 ) {
+      System.out.println( "Welcome to the dream world" );
+      inception( n - 1 );
+    } else {
+      System.out.println( "Wake up!" );
+    }
+    
+  } // END inception
+  
+} // END RecursionOne
