@@ -34,26 +34,36 @@ public class RecursiveMath {
    * sequence. 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 … 
    * (it adds up the two previous numbers to get the result 
    * for the following number)
+   * 
+   * @link: http://introcs.cs.princeton.edu/java/23recursion/Fibonacci.java.html
+   * @link: http://stackoverflow.com/questions/8965006/java-recursive-fibonacci-sequence
    */
-  public static void fibonacci( int n ) {
+  public static int fibonacci( int n ) {
     // Start with 0+1 -> 1, 1+1=2, 1+2=3, 2+3=5
     // previous answer + 2nd level previous answer = 2
-    int result = 0;
+    // int result = 0;
+    int prev = 0;
+    int next = 1;
+    int result = 1;
     
-    /*if ( n == 0 ) {
-      System.out.print( "0, " );
-    }*/ 
-   
-    if ( n > 0 ) {
-       result = prev + next;
-       System.out.print( result + ", " );
-       fibonacci( n-1 );
-    } else {
-      System.out.print( "0, 1, " );
+    if ( n == 0 ) {
+      //System.out.print( "0, " );
+      System.out.print( prev );
+      return prev;
+    } 
+    else if ( n == 1 ) {
+      //System.out.print( "1, " );
+      System.out.print( next );
+      return next;
     }
-    
-    
-    
+    else {
+      prev = fibonacci(n-2);
+      next = fibonacci(n-1);
+      result = prev + next;
+      //System.out.print( fibonacci(n-1) + ", " + fibonacci(n-2) + ", " );
+      System.out.println( prev + " + " + next + " = " + result );
+      return next + prev;
+    }
     
   }
   
