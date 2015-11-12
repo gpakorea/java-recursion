@@ -34,6 +34,9 @@ public class RecursiveMath {
    * sequence. 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 … 
    * (it adds up the two previous numbers to get the result 
    * for the following number)
+   * 
+   * @link: http://introcs.cs.princeton.edu/java/23recursion/Fibonacci.java.html
+   * @link: http://stackoverflow.com/questions/8965006/java-recursive-fibonacci-sequence
    */
   public static int fibonacci( int n ) {
     // Start with 0+1 -> 1, 1+1=2, 1+2=3, 2+3=5
